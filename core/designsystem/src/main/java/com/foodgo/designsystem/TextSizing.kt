@@ -3,6 +3,7 @@ package com.foodgo.designsystem
 import androidx.compose.ui.unit.sp
 
 object TextSizing {
+    val size8 = 8.sp
     val size10 = 10.sp
     val size12 = 12.sp
     val size13 = 13.sp

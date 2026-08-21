@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -23,6 +22,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.foodgo.designsystem.Colors
 import com.foodgo.designsystem.Sizing
@@ -140,10 +140,6 @@ private fun CartButton(
             Box(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .offset(
-                        x = Sizing.size4,
-                        y = -Sizing.size4
-                    )
                     .size(Sizing.size16)
                     .clip(CircleShape)
                     .background(Colors.BadgeRed),
@@ -152,8 +148,11 @@ private fun CartButton(
                 Text(
                     text = count.toString(),
                     color = Color.White,
-                    fontSize = TextSizing.size10,
-                    fontWeight = FontWeight.Bold
+                    fontSize = TextSizing.size12,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.fillMaxSize(),
+                    textAlign = TextAlign.Center,
+                    lineHeight = TextSizing.size12
                 )
             }
         }
