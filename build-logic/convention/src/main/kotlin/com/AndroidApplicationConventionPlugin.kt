@@ -2,10 +2,10 @@ package com
 
 import com.android.build.api.dsl.ApplicationExtension
 import com.extensions.implementationLibrary
+import com.foodgo.configureAndroidCompose
 import com.foodgo.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.internal.Actions.with
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 
@@ -16,6 +16,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
+                configureAndroidCompose(this)
                 defaultConfig.targetSdk = 36
                 testOptions.animationsDisabled = true
             }

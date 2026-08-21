@@ -14,6 +14,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 internal fun Project.configureKotlinAndroid(
     commonExtension: CommonExtension
 ) {
+    pluginManager.apply("org.jetbrains.kotlin.plugin.serialization")
     commonExtension.apply {
         compileSdk = 37
 
@@ -30,6 +31,7 @@ internal fun Project.configureKotlinAndroid(
     configureKotlin<KotlinAndroidProjectExtension>()
 }
 internal fun Project.configureKotlinJvm() {
+    pluginManager.apply("org.jetbrains.kotlin.plugin.serialization")
     extensions.configure<JavaPluginExtension> {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17

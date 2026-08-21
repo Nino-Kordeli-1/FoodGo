@@ -1,0 +1,18 @@
+package com.foodgo.designsystem
+
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.unit.dp
+
+object Radius {
+    val radius2 = RoundedCornerShape(2.dp)
+    val radius4 = RoundedCornerShape(4.dp)
+    val radius6 = RoundedCornerShape(6.dp)
+    val radius8 = RoundedCornerShape(8.dp)
+    val radius10 = RoundedCornerShape(10.dp)
+    val radius12 = RoundedCornerShape(12.dp)
+    val radius16 = RoundedCornerShape(16.dp)
+    val radius22 = RoundedCornerShape(22.dp)
+    val radius25 = RoundedCornerShape(25.dp)
+    val radius50 = RoundedCornerShape(50.dp)
+
+}

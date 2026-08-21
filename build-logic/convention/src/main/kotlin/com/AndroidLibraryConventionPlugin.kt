@@ -30,11 +30,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                     it.androidTest.enable = false
                 }
             }
-            androidTestImplementationLibrary("kotlin.test")
-            testImplementationLibrary("kotlin.test")
-            testImplementationLibrary("junit")
-            implementationLibrary("androidx.tracing.ktx")
-            testImplementationLibrary("turbine")
+            implementationLibrary("androidx-tracing-ktx")
         }
     }
 }

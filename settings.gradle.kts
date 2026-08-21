@@ -1,3 +1,5 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
     includeBuild("build-logic")
     repositories {
@@ -25,3 +27,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "FoodGo"
 include(":app")
+include(":core:data")
+include(":core:designsystem")
+include(":core:domain")
+include(":core:navigation")
+include(":core:ui")
+include(":feature:menu")
+include(":feature:cart")

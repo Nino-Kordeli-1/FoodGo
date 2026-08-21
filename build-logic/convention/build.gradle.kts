@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.android.lint)
 }
 
-group = "com.movieapp.buildlogic"
+group = "com.foodgo.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -40,29 +40,29 @@ gradlePlugin {
         }
         register("koinLibrary") {
             id = "foodgo.koin.library"
-            implementationClass = "KoinConventionPlugin"
+            implementationClass = "com.KoinConventionPlugin"
         }
         register("jvmLibrary") {
             id = "foodgo.jvm.library"
-            implementationClass = "JvmLibraryConventionPlugin"
+            implementationClass = "com.JvmLibraryConventionPlugin"
         }
         register("androidLibrary") {
             id = "foodgo.android.library"
-            implementationClass = "AndroidLibraryConventionPlugin"
+            implementationClass = "com.AndroidLibraryConventionPlugin"
         }
         register("androidApplication") {
             id = "foodgo.android.application"
-            implementationClass = "AndroidApplicationConventionPlugin"
+            implementationClass = "com.AndroidApplicationConventionPlugin"
         }
 
         register("androidFeature") {
-            id = "foodgo.android.application"
-            implementationClass = "AndroidFeatureConventionPlugin"
+            id = "foodgo.android.feature"
+            implementationClass = "com.AndroidFeatureConventionPlugin"
         }
 
         register("androidCompose") {
             id = "foodgo.android.compose"
-            implementationClass = "AndroidComposeConventionPlugin"
+            implementationClass = "com.AndroidComposeConventionPlugin"
         }
     }
 }

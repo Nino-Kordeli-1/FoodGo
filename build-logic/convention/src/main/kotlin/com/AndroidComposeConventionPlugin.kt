@@ -10,8 +10,6 @@ import org.gradle.kotlin.dsl.getByType
 class AndroidComposeConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.apply("org.jetbrains.kotlin.plugin.compose")
-
             when {
                 pluginManager.hasPlugin("com.android.application") -> {
                     configureAndroidCompose(
